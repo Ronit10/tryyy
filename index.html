@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pragya ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(270deg,#ff9a9e,#fad0c4,#ffd1ff);
+background-size:600% 600%;
+animation:bg 12s infinite;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
+
+.card{
+width:360px;
+padding:35px;
+border-radius:25px;
+text-align:center;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(20px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+color:#444;
+}
+
+h1{
+font-family:Sacramento;
+font-size:48px;
+color:#ff4d6d;
+margin:0;
+}
+
+p{
+font-size:15px;
+line-height:1.7;
+}
+
+button{
+margin:10px;
+padding:12px 22px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:14px;
+}
+
+.yes{
+background:#ff4d6d;
+color:white;
+box-shadow:0 0 15px rgba(255,77,109,0.6);
+}
+
+.think{
+background:white;
+color:#ff4d6d;
+}
+
+.hidden{
+display:none;
+}
+
+/* floating hearts */
+
+.float{
+position:absolute;
+bottom:-20px;
+animation:floatUp 7s linear infinite;
+font-size:18px;
+}
+
+@keyframes floatUp{
+to{transform:translateY(-110vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Pragya 🌸</h1>
+
+<p>
+You were never just a crush…  
+You became my favorite notification,  
+my calm place,  
+my happiest thought.  
+</p>
+
+<p>
+I don’t want to rush you,  
+I don’t want to pressure you —  
+I just want something real & beautiful with you 🤍
+</p>
+
+<p><b>Do you feel the same?</b></p>
+
+<button class="yes" onclick="yes()">YES 💖</button>
+<button class="think" onclick="think()">Need Time 🥺</button>
+
+<p id="response" class="hidden"></p>
+
+</div>
+
+<script>
+
+function yes(){
+document.getElementById("response").innerHTML =
+"YAYYYYY 😭💖 This is the beginning of our beautiful story ✨";
+document.getElementById("response").style.display="block";
+celebrate();
+}
+
+function think(){
+document.getElementById("response").innerHTML =
+"No hurry… I’ll wait. You’re worth the patience 🌸";
+document.getElementById("response").style.display="block";
+}
+
+function celebrate(){
+setInterval(()=>{
+let el=document.createElement("div");
+el.className="float";
+el.innerHTML="💖";
+el.style.left=Math.random()*100+"vw";
+document.body.appendChild(el);
+setTimeout(()=>el.remove(),7000);
+},300);
+}
+
+</script>
+
+</body>
+</html>
